@@ -31,7 +31,7 @@ docker rm $(docker ps -a -q)
 # create network
 docker network create randcast_network 
 
-# build iamges
+# build images
 cd BLS-TSS-Network
 docker build -t anvil-chain ./docker/localnet-test/anvil-chain
 docker build -t contract-init -f ./docker/localnet-test/contract-init/Dockerfile .
@@ -50,7 +50,7 @@ docker run -d --network randcast_network --name node1 -v ./docker/localnet-test/
 docker run -d --network randcast_network --name node2 -v ./docker/localnet-test/arpa-node/config_2.yml:/usr/src/app/external/config.yml arpa-node:latest 
 docker run -d --network randcast_network --name node3 -v ./docker/localnet-test/arpa-node/config_3.yml:/usr/src/app/external/config.yml arpa-node:latest 
 
-# check if nodes grouped succesfully 
+# check if nodes grouped successfully 
 # (exec into node1 container)
 watch 'cat /usr/src/app/log/1/node.log | grep "available"'
   # "Group index:0 epoch:1 is available, committers saved."
