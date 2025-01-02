@@ -71,7 +71,7 @@ LOCAL_TEST="true"
 ARPA_EXISTS="true"
 L2_ONLY="false"
 
-# 1. Set existing arpa addreses:
+# 1. Set existing arpa addresses:
    EXISTING_OP_ARPA_ADDRESS
    EXISTING_L1_ARPA_ADDRESS
 
@@ -93,7 +93,7 @@ L2_ONLY="true"
 # double check that EXISTING_L1_CONTROLLER_ADDRESS is set in .env
 python3 main.py
 
-# 5. Kill the nodes, but preserve the artifacts, and run the deploymenbt script. 
+# 5. Kill the nodes, but preserve the artifacts, and run the deployment script. 
 python3 main.py
 ```
 

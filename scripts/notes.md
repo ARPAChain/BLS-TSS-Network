@@ -37,7 +37,7 @@ make devnet-clean
 # error
 ubuntu@jammy:~/optimism$ docker logs f6804639456b
 t=2023-08-11T19:46:55+0000 lvl=info msg=“Initializing Batch Submitter”
-t=2023-08-11T19:46:55+0000 lvl=eror msg=“Unable to create Batch Submitter” error=“querying rollup config: Post \“http://op-node:8545\“: dial tcp 172.18.0.4:8545: connect: connection refused”
+t=2023-08-11T19:46:55+0000 lvl=error msg=“Unable to create Batch Submitter” error=“querying rollup config: Post \“http://op-node:8545\“: dial tcp 172.18.0.4:8545: connect: connection refused”
 t=2023-08-11T19:46:55+0000 lvl=crit msg=“Application failed”               message=“querying rollup config: Post \“http://op-node:8545\“: dial tcp 172.18.0.4:8545: connect: connection refused”
 
 # just restart the container
