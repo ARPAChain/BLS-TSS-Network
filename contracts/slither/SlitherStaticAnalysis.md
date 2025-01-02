@@ -20,7 +20,7 @@ tags:
 
 ```bash
 
-# activate venv and install requirements
+# activate virtualenv  and install requirements
 cd contracts/tools
 python3 -m venv .venv # create venv
 . .venv/bin/activate # activate venv
@@ -47,7 +47,7 @@ slither --json slither_output.json . # Output json
   --exclude-medium          Exclude medium impact analyses
   --exclude-high            Exclude high impact analyses
 
-## CLIther usage
+## Clither usage
 
 CLIther is a CLI tool for analyzing slither output.
 

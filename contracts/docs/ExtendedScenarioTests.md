@@ -1,7 +1,7 @@
 # Extending DKG Scenario Tests
 
 Prior to this test suite, we started with an empty network and 5 newly registered nodes to test various commitDkg() scenarios. This test suite extends the test cases to cover more scenarios.
-Specifically, we set up various inital states of the network and then call nodeQuit() and nodeRegister() to trigger various grouping and rebalancing behaviors. We then assert the expected network state after each commitDkg() call, as well as making sure that group.epoch is incrementing correctly during the various steps.
+Specifically, we set up various initial states of the network and then call nodeQuit() and nodeRegister() to trigger various grouping and rebalancing behaviors. We then assert the expected network state after each commitDkg() call, as well as making sure that group.epoch is incrementing correctly during the various steps.
 
 Note: groupMaxCapacity is set to 6 instead of 10 to simplify setup.
 
@@ -11,13 +11,13 @@ Note: groupMaxCapacity is set to 6 instead of 10 to simplify setup.
 group_0: 5 members
 1 member of group_0 wants to exit the network
 Then, controller will let 4 members left in group_0 do dkg as 4 > 3 which is the threshold
-i.e. the group still meet the grouping condition
+i.e. the group still meets the grouping condition
 after that, in happy path group_0 will be functional with 4 members.
 
 `Rebalance Two Groups (5,3) -> nodeQuit -> 3,4)`
 group_0: 5 members
 group_1: 3 members
-1 member of group_1 wants to exist the network.
+1 member of group_1 wants to exit the network.
 Then, controller will let group_1 which has 2 remaining members rebalance with group_0.
 Result: group_0 (3 members), group_1 (4 members) are both functional.
 
@@ -57,13 +57,13 @@ group_1: 3 members
 member in group_1 called nodeQuit.
 Then, the controller should rebalance between group_0 and group_2,
 Resulting network state should be (4,4)
-Borth group_0 and group_1 should be functional.
+Both group_0 and group_1 should be functional.
 
 `(6,3) -> group_0 nodeQuit -> (5,3)`
 group_0: 6 members
 group_1: 3 members
 member in group_0 calls nodeQuit.
-Then, the controller should emitDkgEvent for group_0 with the 5 remaining remmbers.
+Then, the controller should emitDkgEvent for group_0 with the 5 remaining members.
 Resulting network state should be (5,3)
 Group_0 should be functional.
 
@@ -78,7 +78,7 @@ cd /Users/zen/dev/pr/BLS-TSS-Network/crates/threshold-bls/src/curve
 bn
 cargo test --test serialize_field
 
-# prevent supression of output
+# prevent suppression of output
 cargo test -- --nocapture
 
 # Run only a specific unit test
@@ -133,5 +133,5 @@ Sample flow
 - controller emits event.
 - all nodes receive the event: which container nodeIdAddress, DKGPublicKey.
 - The nodes know which nodes to talk to from nodeIdAddress in the emitted event.
-- Based off the above info, all nodes generate apartialPublicKey and publicKey
+- Based off the above info, all nodes generate aPartialPublicKey and publicKey
 - Node all all commitDkg()

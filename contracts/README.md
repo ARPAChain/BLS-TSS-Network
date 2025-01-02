@@ -40,9 +40,9 @@ forge coverage --report lcov
 
 [ExtendedScenarioTests.md](./docs/ExtendedScenarioTests.md): Rebalancing and Grouping Scenarios
 
-## Slither Statica Analysis
+## Slither Static Analysis
 
-Static analysis has been conducted on our smart contracts to ensure that they are secure and free of bugs. In addition, we offer a tool to help analyze slitehr output. Details can be found here: [SlitherStaticAnalysis.md](./slither/SlitherStaticAnalysis.md)
+Static analysis has been conducted on our smart contracts to ensure that they are secure and free of bugs. In addition, we offer a tool to help analyze slither output. Details can be found here: [SlitherStaticAnalysis.md](./slither/SlitherStaticAnalysis.md)
 
 ---
 

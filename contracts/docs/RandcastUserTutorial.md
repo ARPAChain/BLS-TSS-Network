@@ -25,7 +25,7 @@ export USER_PUBLIC_KEY= # Eth User You are using to deploy consumer / user contr
 export USER_PRIVATE_KEY= # Corresponding Private Key
 ```
 
-Lcal Testnet Exports (See [Internet-test notes](../docker/internet-test-notes/../../README.md))
+Local Testnet Exports (See [Internet-test notes](../docker/internet-test-notes/../../README.md))
 
 ```bash
 export ADAPTER_CONTRACT=0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
@@ -61,7 +61,7 @@ cast logs --from-block 174270 --to-block latest 'SubscriptionCreated(uint64 inde
 #   	0x0000000000000000000000000000000000000000000000000000000000000001 # subId
 #   	0x00000000000000000000000070997970c51812dc3a010c7d01b50e0d17dc79c8 # user public key
 #   ]
-export SUB_ID= # export subid for your newly created subsciption
+export SUB_ID= # export subid for your newly created subscription
 ```
 
 ## 4. Fund the Subscription

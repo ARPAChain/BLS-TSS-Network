@@ -2,11 +2,11 @@
 
 ## Overview
 
-The infrastructure of Randcast(DKG and Threshold-BLS based randomness service).
+The infrastructure of Randcast (DKG and Threshold-BLS based randomness service).
 
 ## Build Guide
 
-Build with `cargo build (--release)`.
+Build with `cargo build --release`.
 
 Test with `cargo test --all -- --test-threads=1 --nocapture`.
 

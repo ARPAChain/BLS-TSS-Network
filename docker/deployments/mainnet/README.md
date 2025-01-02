@@ -3,9 +3,9 @@
 
 This is the instruction for node operators on mainnet.
 
-We offer CDK scripts for deploying an AWS EC2 instance along with all neccesary resources and dependencies(VPC, Firewall rules, login metod etc..) to host your ARPA node containers,
+We offer CDK scripts for deploying an AWS EC2 instance along wish all necessary resources and dependencies(VPC, Firewall rules, login method etc..) to host your ARPA node containers,
 
-If you do not with to use CDK, you can also use the dockerfiles and scripts in this folder to deploy your node containers on your infrastructure.
+If you do not wish to use CDK, you can also use the dockerfiles and scripts in this folder to deploy your node containers on your infrastructure.
 
 NOTE: It may be useful to test out the CDK scripts and instructions in [internet-test](../internet-test/README.md) and [localnet-test](../localnet-test/README.md) first to get a feel for the process.
 
@@ -67,7 +67,7 @@ docker run -d --name node1 -p 50061:50061 -p 50091:50091 -v /tmp/BLS-TSS-Network
 docker run -d --name node2 -p 50062:50061 -p 50092:50091 -v /tmp/BLS-TSS-Network/docker/mainnet/arpa-node/config_2.yml:/usr/src/app/external/config.yml arpachainio/node:latest
 docker run -d --name node3 -p 50063:50061 -p 50093:50091 -v /tmp/BLS-TSS-Network/docker/mainnet/arpa-node/config_3.yml:/usr/src/app/external/config.yml arpachainio/node:latest
 
-# check if nodes grouped succesfully
+# check if nodes grouped successfully
 docker exec -it node1 /bin/bash       
 watch 'cat /var/log/randcast_node_client.log | grep "available"'
 

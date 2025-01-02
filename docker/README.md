@@ -10,7 +10,7 @@ Scripts are split into the following sections:
 
 [localnet-test](./deployments/localnet-test/README.md): deploy testnet locally using docker network. This is the easiest way to get started with randcast and is recommended for testing purposes.
 
-- The dockerfiles provided in this folder most be built locally and are not hosted on dockerhub.
+- The dockerfiles provided in this folder must be built locally and are not hosted on dockerhub.
 
 [internet-test](./deployments/internet-test/README.md): deploy testnet online using AWS EC2 + docker. This gives a more practical example of how nodes are deployed on mainnet.
 
@@ -41,7 +41,7 @@ docker build -t anvil-chain ./docker/internet-test/anvil-chain
 docker build -t contract-init -f ./docker/internet-test/contract-init/Dockerfile .
 docker build -t arpa-node ./docker/internet-test/arpa-node
 
-# tag imges for docker hub
+# tag images for docker hub
 docker tag anvil-chain arpachainio/anvil-test:latest
 docker tag contract-init arpachainio/contracts-test:latest
 docker tag arpa-node arpachainio/node:latest
